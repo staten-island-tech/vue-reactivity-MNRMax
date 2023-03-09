@@ -4,38 +4,49 @@ const props = defineProps({
   typeInput: String
 });
 const emit = defineEmits(['response']);
-let counter = ref(0)
 
-const wheels = ref([{ message: 'Foo' }, { message: 'Bar' }])
+const wheels = ref([{ image: '/wheel.png', name: "Default", id: "default" }, { image: '/wheel.png', name: "Default", id: "default2" }, { image: '/wheel.png', name: "Default", id: "default3" }])
 </script>
 
 <template>
   <div id="box">
-    <div v-for="wheel in wheels">
-      <p>{{ wheel.message }}</p>
+    <div v-for="wheel in wheels" id="wheel" @click="emit('response', wheel.id)" :key="wheel.id" draggable="false">
+      <img draggable="false" v-bind:src="wheel.image">
+      <p>{{ wheel.name }}</p>
     </div>
-    <!-- <button @click="{
-      counter++;
-      emit('response', counter)
-    }
-    ">Click Me</button> -->
   </div>
 </template>
 
 <style scoped>
-
 #box {
   width: 100%;
-  height: 10rem;
   background-color: rgb(63, 63, 63);
   position: absolute;
   bottom: 0;
   display: flex;
+  height: 12rem;
+  padding: 1rem;
+}
+
+#wheel {
+  height: 100%;
+  text-align: center;
+  color: grey;
+  background-color: white;
+  padding: 0.5rem;
+  padding-bottom: 0.1rem;
 }
 
 button {
   width: 10%;
   height: 3rem;
   font-size: 2rem;
+}
+
+img {
+  height: 80%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 </style>

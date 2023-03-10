@@ -1,12 +1,18 @@
 <script setup>
 import { ref } from 'vue'
 import SelectItem from '../components/SelectItem.vue'
-const childMsg = ref(0)
+const wheelImage = ref("")
 </script>
 
 <template>
   <main>
-    <SelectItem @response="(msg) => childMsg = msg" />
-    <p>{{ childMsg }}</p>
+    <SelectItem @response="(msg) => wheelImage = msg" />
+    <img v-bind:src="wheelImage">
   </main>
 </template>
+
+<style scoped>
+    img {
+        width: 10%;
+    }
+</style>

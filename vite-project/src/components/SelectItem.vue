@@ -1,52 +1,55 @@
 <script setup>
 import { ref } from 'vue'
 const props = defineProps({
-  typeInput: String
+    typeInput: String
 });
 const emit = defineEmits(['response']);
 
-const wheels = ref([{ image: '/wheel.png', name: "Default", id: "default" }, { image: '/wheel.png', name: "Default", id: "default2" }, { image: '/wheel.png', name: "Default", id: "default3" }])
+const wheels = ref(null)
+
+fetch('/wheels.json')
+  .then((res) => res.json())
+  .then((json) => (wheels.value = json.wheels))
+
+  console.log(wheels)
 </script>
 
 <template>
-  <div id="box">
-    <div v-for="wheel in wheels" id="wheel" @click="emit('response', wheel.id)" :key="wheel.id" draggable="false">
-      <img draggable="false" v-bind:src="wheel.image">
-      <p>{{ wheel.name }}</p>
+    <div id="box">
+        <div v-for="wheel in wheels" id="wheel" @click="emit('response', wheel.image)" :key="wheel.id" draggable="false">
+            <img draggable="false" v-bind:src="wheel.image">
+            <p>{{ wheel.name }}</p>
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
 #box {
-  width: 100%;
-  background-color: rgb(63, 63, 63);
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  height: 12rem;
-  padding: 1rem;
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 12rem;
+    padding: 1rem;
+    justify-content: space-around;
 }
 
 #wheel {
-  height: 100%;
-  text-align: center;
-  color: grey;
-  background-color: white;
-  padding: 0.5rem;
-  padding-bottom: 0.1rem;
+    height: 100%;
+    text-align: center;
+    color: grey;
+    background-color: white;
+    padding: 0.5rem;
+    padding-bottom: 0.1rem;
 }
 
 button {
-  width: 10%;
-  height: 3rem;
-  font-size: 2rem;
+    width: 10%;
+    height: 3rem;
+    font-size: 2rem;
 }
 
 img {
-  height: 80%;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-}
-</style>
+    height: 80%;
+}</style>

@@ -1,0 +1,48 @@
+{"wheels": [
+    {
+        "image": "/images/wheel.png",
+        "name": "Default",
+        "id": "default"
+    },
+    {
+        "image": "/images/wheel3.png",
+        "name": "Default",
+        "id": "default3"
+    },
+    {
+        "image": "/images/wheel8.png",
+        "name": "Default",
+        "id": "default8"
+    },
+    {
+        "image": "/images/wheel7.png",
+        "name": "Default",
+        "id": "default7"
+    },
+    {
+        "image": "/images/wheel2.png",
+        "name": "Default",
+        "id": "default2"
+    },
+    {
+        "image": "/images/wheel4.png",
+        "name": "Default",
+        "id": "default4"
+    },
+    {
+        "image": "/images/wheel5.png",
+        "name": "Default",
+        "id": "default5"
+    },
+    {
+        "image": "/images/wheel9.png",
+        "name": "Default",
+        "id": "default9"
+    },
+    {
+        "image": "/images/wheel6.png",
+        "name": "Default",
+        "id": "default6"
+    }
+]
+}

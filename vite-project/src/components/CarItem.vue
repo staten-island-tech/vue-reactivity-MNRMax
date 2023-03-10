@@ -1,40 +1,42 @@
 <script setup>
 import { ref } from 'vue'
 const props = defineProps({
-  typeInput: String
+  wheel: String,
+  body: String
 });
-const emit = defineEmits(['response']);
-let counter = ref(0)
-
-const wheels = ref([{ image: 'Foo' }, { message: 'Bar' }])
 </script>
 
 <template>
-  <div id="box">
-    <div v-for="wheel in wheels">
-      <p>{{ wheel.message }}</p>
-    </div>
-    <!-- <button @click="{
-          counter++;
-          emit('response', counter)
-        }
-        ">Click Me</button> -->
+  <div id="car">
+    <img id="body" src="/images/car2.png">
+    <img id="wheel1" src="/images/wheel.png">
+    <img id="wheel2" src="/images/wheel.png">
   </div>
 </template>
 
 <style scoped>
-#box {
-  width: 100%;
-  height: 10rem;
-  background-color: rgb(63, 63, 63);
-  position: absolute;
-  bottom: 0;
-  display: flex;
+#car {
+  width: 20%;
+  position: relative;
 }
-
-button {
-  width: 10%;
-  height: 3rem;
-  font-size: 2rem;
+#body {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#wheel1 {
+  position: absolute;
+  grid-area:1/1;
+  width: 13.8%;
+  bottom: -13%;
+  left: 15.4%;
+}
+#wheel2 {
+  position: absolute;
+  width: 13.8%;
+  left: 76.7%;
+  bottom: -13%;
+  transform: rotate(45deg);
 }
 </style>

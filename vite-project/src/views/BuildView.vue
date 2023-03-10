@@ -1,18 +1,20 @@
 <script setup>
 import { ref } from 'vue'
-import SelectItem from '../components/SelectItem.vue'
+import SelectWheelItem from '../components/SelectWheelItem.vue'
+import CarItem from '../components/CarItem.vue'
 const wheelImage = ref("")
 </script>
 
 <template>
   <main>
-    <SelectItem @response="(msg) => wheelImage = msg" />
+    <SelectWheelItem @response="(msg) => wheelImage = msg" />
+    <CarItem wheel="/images/wheel.png" body="/images/car2.png" />
     <img v-bind:src="wheelImage">
   </main>
 </template>
 
 <style scoped>
-    img {
-        width: 10%;
-    }
+img {
+  width: 10%;
+}
 </style>

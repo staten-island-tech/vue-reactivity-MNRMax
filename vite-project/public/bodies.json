@@ -1,0 +1,14 @@
+{
+    "bodies": [
+        {
+            "image": "/images/body.png",
+            "name": "Default",
+            "id": "default"
+        },
+        {
+            "image": "/images/body2.png",
+            "name": "Default",
+            "id": "default3"
+        }
+    ]
+}

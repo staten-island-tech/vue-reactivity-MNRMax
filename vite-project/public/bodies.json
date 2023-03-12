@@ -1,14 +1,44 @@
 {
     "bodies": [
         {
-            "image": "/images/body.png",
+            "image": "/images/body1.png",
             "name": "Default",
             "id": "default"
         },
         {
             "image": "/images/body2.png",
             "name": "Default",
+            "id": "default2"
+        },
+        {
+            "image": "/images/body3.png",
+            "name": "Default",
             "id": "default3"
+        },
+        {
+            "image": "/images/body4.png",
+            "name": "Default",
+            "id": "default4"
+        },
+        {
+            "image": "/images/body5.png",
+            "name": "Default",
+            "id": "default5"
+        },
+        {
+            "image": "/images/body6.png",
+            "name": "Default",
+            "id": "default6"
+        },
+        {
+            "image": "/images/body7.png",
+            "name": "Default",
+            "id": "default7"
+        },
+        {
+            "image": "/images/body8.png",
+            "name": "Default",
+            "id": "default8"
         }
     ]
 }

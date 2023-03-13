@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const emit = defineEmits(['response']);
 
-let selected = ref(null)
+let selected = ref("body")
 </script>
 
 <template>
@@ -25,6 +25,12 @@ let selected = ref(null)
             emit('response', 'engine');
         }">
             <p>Engine</p>
+        </div>
+        <div v-bind:class="(selected == 'spoiler') ? 'selected' : 'unselected'" @click="{
+            selected = 'spoiler';
+            emit('response', 'spoiler');
+        }">
+            <p>Spoiler</p>
         </div>
     </div>
 </template>

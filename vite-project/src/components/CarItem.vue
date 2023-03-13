@@ -3,7 +3,8 @@ import { ref } from 'vue'
 const props = defineProps({
   wheel: String,
   body: String,
-  spinning: Boolean
+  spoiler: String,
+  spinning: Boolean,
 });
 
 // wheel = ref("/images/wheel.png")
@@ -12,6 +13,7 @@ const props = defineProps({
 <template>
   <div id="car">
     <img id="body" v-bind:src="body">
+    <img id="spoiler" v-bind:src="spoiler">
     <img id="wheel1" v-bind:class="(spinning) ? 'rotate' : ''" v-bind:src="wheel">
     <img id="wheel2" v-bind:class="(spinning) ? 'rotate' : ''" v-bind:src="wheel">
   </div>
@@ -45,6 +47,12 @@ const props = defineProps({
   width: 13.8%;
   left: 76.73%;
   bottom: -17%;
+}
+#spoiler {
+  position: absolute;
+  width: 13.8%;
+  left: 0%;
+  top: -26%;
 }
 
 .rotate {

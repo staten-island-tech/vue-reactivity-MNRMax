@@ -1,0 +1,28 @@
+{"spoilers": [
+    {
+        "image": "",
+        "name": "Default",
+        "id": "default"
+    },
+    {
+        "image": "/images/spoiler1.png",
+        "name": "Default",
+        "id": "default"
+    },
+    {
+        "image": "/images/spoiler2.png",
+        "name": "Default",
+        "id": "default"
+    },
+    {
+        "image": "/images/spoiler3.png",
+        "name": "Default",
+        "id": "default"
+    },
+    {
+        "image": "/images/spoiler4.png",
+        "name": "Default",
+        "id": "default"
+    }
+]
+}

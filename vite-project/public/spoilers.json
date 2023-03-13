@@ -2,27 +2,27 @@
     {
         "image": "",
         "name": "Default",
-        "id": "default"
+        "id": "none"
     },
     {
         "image": "/images/spoiler1.png",
         "name": "Default",
-        "id": "default"
+        "id": "spoiler1"
     },
     {
         "image": "/images/spoiler2.png",
         "name": "Default",
-        "id": "default"
+        "id": "spoiler2"
     },
     {
         "image": "/images/spoiler3.png",
         "name": "Default",
-        "id": "default"
+        "id": "spoiler3"
     },
     {
         "image": "/images/spoiler4.png",
         "name": "Default",
-        "id": "default"
+        "id": "spoiler4"
     }
 ]
 }

@@ -17,7 +17,7 @@ fetch('/engines.json')
 <template>
     <div id="box">
         <div v-for="engine in engines" id="engine" @click="emit('response', engine.image)" :key="engine.id" draggable="false">
-            <img draggable="false" v-bind:src="engine.image">
+            <img draggable="false" :src="engine.image">
             <p>{{ engine.name }}</p>
         </div>
     </div>

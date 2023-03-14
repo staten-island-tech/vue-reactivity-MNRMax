@@ -1,14 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-import SelectWheelItem from '../components/SelectWheelItem.vue'
-import SelectSpoilerItem from '../components/SelectSpoilerItem.vue'
-import SelectBodyItem from '../components/SelectBodyItem.vue'
+import SelectWheelItem from '../components/selectors/SelectWheelItem.vue'
+import SelectSpoilerItem from '../components/selectors/SelectSpoilerItem.vue'
+import SelectBodyItem from '../components/selectors/SelectBodyItem.vue'
+import SelectEngineItem from '../components/selectors/SelectEngineItem.vue'
 import CarItem from '../components/CarItem.vue'
 import SelectorItem from '../components/SelectorItem.vue'
 
 const wheelImage = ref("/images/wheel.png")
 const spoilerImage = ref("")
 const bodyImage = ref("/images/body1.png")
+const engineImage = ref("/images/engine1.png")
 const spinning = ref(false)
 const selector = ref("body")
 
@@ -20,8 +22,9 @@ const selector = ref("body")
     <SelectorItem @response="(msg) => selector = msg"/>
     <SelectWheelItem v-if="selector == 'wheels'" @response="(msg) => wheelImage = msg" />
     <SelectSpoilerItem v-if="selector == 'spoiler'" @response="(msg) => spoilerImage = msg" />
+    <SelectEngineItem v-if="selector == 'engine'" @response="(msg) => engineImage = msg" />
     <SelectBodyItem v-if="selector == 'body'" @response="(msg) => bodyImage = msg" />
-    <CarItem v-bind:wheel="wheelImage" v-bind:body="bodyImage" v-bind:spinning="spinning" v-bind:spoiler="spoilerImage"/>
+    <CarItem :wheel="wheelImage" :body="bodyImage" :spinning="spinning" :spoiler="spoilerImage" :engine="engineImage"/>
   </main>
 </template>
 

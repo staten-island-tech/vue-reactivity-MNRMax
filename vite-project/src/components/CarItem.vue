@@ -4,6 +4,7 @@ const props = defineProps({
   wheel: String,
   body: String,
   spoiler: String,
+  engine: String,
   spinning: Boolean,
 });
 
@@ -12,10 +13,11 @@ const props = defineProps({
 
 <template>
   <div id="car">
-    <img id="body" v-bind:src="body">
-    <img id="spoiler" v-bind:src="spoiler">
-    <img id="wheel1" v-bind:class="(spinning) ? 'rotate' : ''" v-bind:src="wheel">
-    <img id="wheel2" v-bind:class="(spinning) ? 'rotate' : ''" v-bind:src="wheel">
+    <img id="body" :src="body">
+    <img id="spoiler" :src="spoiler">
+    <img id="engine" :src="engine">
+    <img id="wheel1" :class="(spinning) ? 'rotate' : ''" :src="wheel">
+    <img id="wheel2" :class="(spinning) ? 'rotate' : ''" :src="wheel">
   </div>
 </template>
 
@@ -54,7 +56,12 @@ const props = defineProps({
   left: 0%;
   top: -26%;
 }
-
+#engine {
+  position: absolute;
+  width: 13.8%;
+  right: 0%;
+  top: -20%;
+}
 .rotate {
   animation: rotation 0.5s infinite linear;
 }

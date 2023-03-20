@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
@@ -9,9 +10,5 @@ const app = createApp(App)
 
 app.use(router)
 app.use(pinia)
-
-router.beforeEach((to) => {
-    const main = useMainStore(pinia)
-  })
 
 app.mount('#app')

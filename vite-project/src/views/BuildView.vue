@@ -6,18 +6,22 @@ import SelectBodyItem from '../components/selectors/SelectBodyItem.vue'
 import SelectEngineItem from '../components/selectors/SelectEngineItem.vue'
 import CarItem from '../components/CarItem.vue'
 import SelectorItem from '../components/SelectorItem.vue'
+import { useCarStore } from '../stores/carStore'
 
-const wheelImage = ref("/images/wheel.png")
-const spoilerImage = ref("")
-const bodyImage = ref("/images/body1.png")
-const engineImage = ref("/images/engine1.png")
+const car = useCarStore()
+
+const wheelImage = ref(car.wheels)
+const spoilerImage = ref(car.spoiler)
+const bodyImage = ref(car.body)
+const engineImage = ref(car.engine)
 const spinning = ref(false)
 const selector = ref("body")
 
 function store() {
-  
+  car.set(bodyImage, wheelImage, engineImage, spoilerImage)
 }
 
+store()
 </script>
 
 <template>

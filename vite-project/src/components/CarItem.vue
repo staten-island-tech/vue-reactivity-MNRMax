@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-const main = useMainStore()
 const props = defineProps({
   wheel: String,
   body: String,

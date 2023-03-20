@@ -14,13 +14,17 @@ const engineImage = ref("/images/engine1.png")
 const spinning = ref(false)
 const selector = ref("body")
 
+function store() {
+  
+}
+
 </script>
 
 <template>
   <main>
     <input type="checkbox" v-model="spinning">
     <SelectorItem @response="(msg) => selector = msg"/>
-    <SelectWheelItem v-if="selector == 'wheels'" @response="(msg) => wheelImage = msg" />
+    <SelectWheelItem v-if="selector == 'wheels'" @response="(msg) => {wheelImage = msg; store()}"/>
     <SelectSpoilerItem v-if="selector == 'spoiler'" @response="(msg) => spoilerImage = msg" />
     <SelectEngineItem v-if="selector == 'engine'" @response="(msg) => engineImage = msg" />
     <SelectBodyItem v-if="selector == 'body'" @response="(msg) => bodyImage = msg" />

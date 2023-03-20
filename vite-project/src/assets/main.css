@@ -20,7 +20,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: aliceblue;
+  background-color: aliceblue
+  ;
 }
 
 img {

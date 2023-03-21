@@ -6,22 +6,28 @@ const props = defineProps({
   spoiler: String,
   engine: String,
   spinning: Boolean,
+  raceMode: Boolean,
 });
 
 // wheel = ref("/images/wheel.png")
 </script>
 
 <template>
-  <div id="car">
+  <div :id="raceMode ? 'race' : 'car' ">
     <img id="body" :src="body">
     <img id="spoiler" :src="spoiler">
-    <img id="engine" :src="engine">
+    <img id="engine" v-if="!raceMode" :src="engine">
     <img id="wheel1" :class="(spinning) ? 'rotate' : ''" :src="wheel">
     <img id="wheel2" :class="(spinning) ? 'rotate' : ''" :src="wheel">
   </div>
 </template>
 
 <style scoped>
+#race {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 #car {
   width: 70%;
   position: relative;

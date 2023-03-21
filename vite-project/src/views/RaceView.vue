@@ -1,31 +1,26 @@
-<script>
-import { onMounted, ref } from 'vue';
+<script setup>
+import { ref } from 'vue'
+import CarItem from '../components/CarItem.vue'
 import { useCarStore } from '../stores/carStore'
 
-const car = useCarStore();
-const canvas = ref(null);
+const car = useCarStore()
 
-onMounted(() => {
-  const context = canvas.value.getContext('2d');
-  canvas.value.width = canvas.value.offsetWidth;
-  canvas.value.height = canvas.value.offsetHeight;
-  context.beginPath();
-  context.moveTo(100, 100);
-  context.lineTo(400, 400);
-  context.strokeStyle = 'green';
-  context.lineWidth = 2;
-  context.stroke();
-  context.closePath();
-});
+const wheelImage = ref(car.wheels)
+const spoilerImage = ref(car.spoiler)
+const bodyImage = ref(car.body)
+const engineImage = ref(car.engine)
+const spinning = ref(false)
+
 </script>
 
 <template>
-  <canvas id="canvas" ref="canvas"></canvas>
+  <main>
+    <CarItem class="car" :wheel="wheelImage" :body="bodyImage" :spinning="spinning" :spoiler="spoilerImage" :engine="engineImage" :raceMode="true"/>
+  </main>
 </template>
 
-<style>
-#canvas {
-  width: 100vw;
-  height: 100vh;
+<style scoped>
+.car {
+  width: 25%;
 }
 </style>

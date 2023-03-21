@@ -32,7 +32,7 @@ store()
     <SelectSpoilerItem v-if="selector == 'spoiler'" @response="(msg) => spoilerImage = msg" />
     <SelectEngineItem v-if="selector == 'engine'" @response="(msg) => engineImage = msg" />
     <SelectBodyItem v-if="selector == 'body'" @response="(msg) => bodyImage = msg" />
-    <CarItem :wheel="wheelImage" :body="bodyImage" :spinning="spinning" :spoiler="spoilerImage" :engine="engineImage"/>
+    <CarItem :wheel="wheelImage" :body="bodyImage" :spinning="spinning" :spoiler="spoilerImage" :engine="engineImage" :raceMode="false"/>
   </main>
 </template>
 

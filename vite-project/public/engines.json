@@ -2,32 +2,38 @@
     {
         "image": "/images/engine1.png",
         "name": "Default",
-        "id": "engine1"
+        "id": "engine1",
+        "stepModifier": 0
     },
     {
         "image": "/images/engine2.png",
         "name": "Default",
-        "id": "engine2"
+        "id": "engine2",
+        "stepModifier": 1
     },
     {
         "image": "/images/engine3.png",
         "name": "Default",
-        "id": "engine3"
+        "id": "engine3",
+        "stepModifier": 2
     },
     {
         "image": "/images/engine4.png",
         "name": "Default",
-        "id": "engine4"
+        "id": "engine4",
+        "stepModifier": 3
     },
     {
         "image": "/images/engine5.png",
         "name": "Default",
-        "id": "engine5"
+        "id": "engine5",
+        "stepModifier": 4
     },
     {
         "image": "/images/engine6.png",
         "name": "Default",
-        "id": "engine6"
+        "id": "engine6",
+        "stepModifier": 5
     }
 ]
 }

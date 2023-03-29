@@ -2,27 +2,32 @@
     {
         "image": "",
         "name": "Default",
-        "id": "none"
+        "id": "none",
+        "stepModifier": 0
     },
     {
         "image": "/images/spoiler1.png",
         "name": "Default",
-        "id": "spoiler1"
+        "id": "spoiler1",
+        "stepModifier": 2
     },
     {
         "image": "/images/spoiler2.png",
         "name": "Default",
-        "id": "spoiler2"
+        "id": "spoiler2",
+        "stepModifier": 1
     },
     {
         "image": "/images/spoiler3.png",
         "name": "Default",
-        "id": "spoiler3"
+        "id": "spoiler3",
+        "stepModifier": 3
     },
     {
         "image": "/images/spoiler4.png",
         "name": "Default",
-        "id": "spoiler4"
+        "id": "spoiler4",
+        "stepModifier": 4
     }
 ]
 }

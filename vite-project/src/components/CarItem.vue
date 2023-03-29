@@ -23,19 +23,6 @@ const props = defineProps({
 </template>
 
 <style scoped>
-#race {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#car {
-  width: 70%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 5%;
-}
-
 #body {
   position: relative;
   top: 0;

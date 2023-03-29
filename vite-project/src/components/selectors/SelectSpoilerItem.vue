@@ -10,13 +10,12 @@ const spoilers = ref(null)
 fetch('/spoilers.json')
   .then((res) => res.json())
   .then((json) => (spoilers.value = json.spoilers))
-
   console.log(spoilers)
 </script>
 
 <template>
     <div id="box">
-        <div v-for="spoiler in spoilers" id="spoiler" @click="emit('response', spoiler.image)" :key="spoiler.id" draggable="false">
+        <div v-for="spoiler in spoilers" id="spoiler" @click="emit('response', {image: spoiler.image, stepModifier: spoiler.stepModifier})" :key="spoiler.id" draggable="false">
             <img draggable="false" v-bind:src="spoiler.image == '' ? '/images/none.png' : spoiler.image">
             <p>{{ spoiler.name }}</p>
         </div>
